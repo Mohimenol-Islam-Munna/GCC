@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#0F192D] pt-16">
+    <div className="bg-[#0F192D] py-16">
       <div className="sm:w-[90%] mx-auto flex flex-wrap">
         <div className="px-3 basis-full lg:basis-1/2">
           <h2 className="text-white text-6xl">E</h2>
@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="flex flex-wrap gap-[10px]">
               {/* newsletter  */}
               <div className="basis-full sm:basis-[calc(65%-5px)]">
-                <h2 className="text-xl sm:text-3xl text-white">
+                <h2 className="text-xl sm:text-2xl text-white">
                   Get Our Newsletter
                 </h2>
                 <p className="mt-3 text-white text-xs sm:text-sm">
