@@ -1,80 +1,161 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { BsBookmark } from "react-icons/bs";
+import { GoLocation } from "react-icons/go";
+
+import SharedSlider from "./Shared/SharedSlider";
 
 function Events() {
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
+  const eventsSlider = useRef(null);
 
+  // slider settings
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    arrows: true,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
-    nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
+  const customSliderProps = {
+    title: "Events",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laboriosam iusto provident unde dolorem, mollitia a culpa totam deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laboriosam iusto provident unde dolorem, mollitia a culpa totam deserunt",
+    targetRef: eventsSlider,
+    settings: settings,
+  };
+
+  const eventSliderData = [
+    {
+      id: 1,
+      title: "Lorem ipsum dolor sit 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
+      image: "/images/demoImage.jpg",
+      time: {
+        date: "30",
+        month: "oct",
+      },
+      location: "bangladesh",
+    },
+    {
+      id: 2,
+      title: "Lorem ipsum dolor sit 2",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
+      image: "/images/demoImage.jpg",
+      time: {
+        date: "30",
+        month: "oct",
+      },
+      location: "india",
+    },
+    {
+      id: 3,
+      title: "Lorem ipsum dolor sit 3",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
+      image: "/images/demoImage.jpg",
+      time: {
+        date: "30",
+        month: "oct",
+      },
+      location: "usa",
+    },
+    {
+      id: 4,
+      title: "Lorem ipsum dolor sit 4",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
+      image: "/images/demoImage.jpg",
+      time: {
+        date: "30",
+        month: "oct",
+      },
+      location: "nepal",
+    },
+    {
+      id: 5,
+      title: "Lorem ipsum dolor sit 5",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
+      image: "/images/demoImage.jpg",
+      time: {
+        date: "30",
+        month: "oct",
+      },
+      location: "spain",
+    },
+  ];
+
   return (
-    <div className="border border-indigo-400 my-20 py-10 bg-gray-100">
-      <h3>Events</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-        laboriosam iusto provident unde dolorem, mollitia a culpa totam deserunt
-      </p>
+    <div className="py-10 bg-gray-100">
+      <SharedSlider customSliderProps={customSliderProps}>
+        {eventSliderData.map((eventData) => (
+          <div key={eventData.id} className="bg-gray-300 relative">
+            <div className="h-[250px]">
+              <img
+                src={`${eventData.image}`}
+                alt="eventImage"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute top-6 right-6">
+              <button>
+                <BsBookmark className="text-xl" />
+              </button>
+            </div>
+            {/* content  */}
+            <div>
+              <div className="flex items-center">
+                <p className="grow p-2">{eventData.title}</p>
+                <div className=" bg-indigo-400 px-4 py-1">
+                  <p>{eventData.time.date}</p>
+                  <p>{eventData.time.month}</p>
+                </div>
+              </div>
+              <p className="flex items-center px-2 gap-2">
+                <GoLocation /> <span className="capitalize">{eventData.location}</span>
+              </p>
+              <p className="mt-3 px-2">{eventData.description}</p>
+              <div className="flex px-2 justify-between items-center my-5 ">
+                <button className="text-indigo-500 uppercase">book now</button>
+                <button className="uppercase">more info</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </SharedSlider>
 
-      <div
-        className="border border-yellow-500 inline-block p-3"
-        // onClick={this.slider.slickNext()}
-      >
-        <IoIosArrowForward />
-      </div>
-
-      {/* slick slider  */}
-      <div className="border-2 border-indigo-500">
-        <Slider {...settings}>
-          <div className="bg-indigo-300">
-            <h3>1</h3>
-          </div>
-          <div className="bg-green-200">
-            <h3>2</h3>
-          </div>
-          <div className="bg-red-200">
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-          <div>
-            <h3>9</h3>
-          </div>
-        </Slider>
-      </div>
-      <div>
-        <button className="border border-blue-400 px-2 py-1 rounded">
+      <div className="mt-10 text-center">
+        <button className="border border-blue-400 px-5 py-1 rounded uppercase">
           view all events
         </button>
       </div>

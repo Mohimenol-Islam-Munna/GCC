@@ -10,8 +10,8 @@ import Subscription from "../components/Subscription";
 
 const Home = () => {
   return (
-    <div className="bg-gray-600">
-      <div className="sm:w-[90%] mx-auto border border-red-500">
+    <div className="">
+      <div className="sm:w-[90%] mx-auto">
         <Title>GCC Limited</Title>
         <Hero />
         <Article />
