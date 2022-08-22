@@ -54,7 +54,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
-            <Link href="/service">
+            <Link href="/service" passHref>
               <a
                 className={`${
                   router.pathname === "/service"
@@ -67,7 +67,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
-            <Link href="/pricing">
+            <Link href="/pricing" passHref>
               <a
                 className={`${
                   router.pathname === "/pricing"
@@ -80,7 +80,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
-            <Link href="/resources">
+            <Link href="/resources" passHref>
               <a
                 className={`${
                   router.pathname === "/resources"
@@ -93,7 +93,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
-            <Link href="/enterprise">
+            <Link href="/enterprise" passHref>
               <a
                 className={`${
                   router.pathname === "/enterprise"
@@ -108,7 +108,7 @@ const Header = () => {
 
           {/* right side  */}
           <li className="sm:ml-auto sm:mr-2.5 flex justify-center items-center py-2 border-b sm:border-b-0 hover:bg-gray-200 font-medium">
-            <Link href="/lanuage">
+            <Link href="/lanuage" passHref>
               <a
                 className={`${
                   router.pathname === "/lanuage"
@@ -121,7 +121,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="sm:mr-2.5 py-2 uppercase border-b sm:border-b-0 hover:bg-gray-200 font-medium">
-            <Link href="/login">
+            <Link href="/login" passHref>
               <a
                 className={`${
                   router.pathname === "/login"
@@ -134,7 +134,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="py-2 uppercase hover:bg-gray-200 font-medium">
-            <Link href="/contact-sales">
+            <Link href="/contact-sales" passHref>
               <a
                 className={`${
                   router.pathname === "/contact-sales"
