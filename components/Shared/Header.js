@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 border-b border-green-600">
       <div
         className={`sm:w-[90%] mx-auto relative ${
           !toggleMenu ? "pt-7 pb-7" : "pt-5"
