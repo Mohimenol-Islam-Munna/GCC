@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+
+// components
+import Filter from "../components/Filter";
 
 function Article() {
   return (
-    <div>Article</div>
-  )
+    <div>
+      <Filter />
+      <h2>Article</h2>
+    </div>
+  );
 }
 
-export default Article
+export default Article;
