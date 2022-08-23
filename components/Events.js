@@ -23,7 +23,6 @@ function Events() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -142,7 +141,8 @@ function Events() {
                 </div>
               </div>
               <p className="flex items-center px-2 gap-2">
-                <GoLocation /> <span className="capitalize">{eventData.location}</span>
+                <GoLocation />{" "}
+                <span className="capitalize">{eventData.location}</span>
               </p>
               <p className="mt-3 px-2">{eventData.description}</p>
               <div className="flex px-2 justify-between items-center my-5 ">

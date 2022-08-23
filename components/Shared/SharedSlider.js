@@ -19,7 +19,7 @@ const SharedSlider = ({ customSliderProps, children }) => {
 
   return (
     <div>
-      <h3 className="text-3xl">{title}</h3>
+      <h3 className="text-3xl capitalize">{title}</h3>
       <div className="mt-3 mb-6 flex">
         <p className="grow text-sm">{description}</p>
 
