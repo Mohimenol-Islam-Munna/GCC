@@ -116,10 +116,10 @@ function Events() {
   ];
 
   return (
-    <div className="py-10 bg-gray-100">
+    <div className="w-[90%] mx-auto py-10">
       <SharedSlider customSliderProps={customSliderProps}>
         {eventSliderData.map((eventData) => (
-          <div key={eventData.id} className="bg-gray-300 relative">
+          <div key={eventData.id} className="relative">
             <div className="h-[250px]">
               <img
                 src={`${eventData.image}`}
@@ -136,7 +136,7 @@ function Events() {
             <div>
               <div className="flex items-center">
                 <p className="grow p-2">{eventData.title}</p>
-                <div className=" bg-indigo-400 px-4 py-1">
+                <div className="px-4 py-1 bg-indigo-400">
                   <p>{eventData.time.date}</p>
                   <p>{eventData.time.month}</p>
                 </div>
@@ -154,7 +154,7 @@ function Events() {
         ))}
       </SharedSlider>
 
-      <div className="mt-10 text-center">
+      <div className="my-16 text-center">
         <button className="border border-blue-400 px-5 py-1 rounded uppercase">
           view all events
         </button>

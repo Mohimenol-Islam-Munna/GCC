@@ -18,7 +18,7 @@ const SharedSlider = ({ customSliderProps, children }) => {
   };
 
   return (
-    <div className=" bg-gray-100">
+    <div>
       <h3 className="text-3xl">{title}</h3>
       <div className="mt-3 mb-6 flex">
         <p className="grow text-sm">{description}</p>
