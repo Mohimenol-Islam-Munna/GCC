@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BsBookmark } from "react-icons/bs";
-import { GoLocation } from "react-icons/go";
+
 
 import SharedSlider from "./Shared/SharedSlider";
 
