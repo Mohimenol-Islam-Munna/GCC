@@ -1,6 +1,6 @@
 import React from "react";
 
-const Filter = () => {
+const Filter = ({searchKeyWordHandler}) => {
   return (
     <div className="py-10">
       <input
@@ -8,6 +8,7 @@ const Filter = () => {
         placeholder="Search Keywords"
         className="w-full p-2 border-b border-gray-700 bg-transparent
          outline-0 focus:border-indigo-400 placeholder:text-lg"
+         onChange={(e)=> searchKeyWordHandler(e)}
       />
       <div className="mt-14">
         <label htmlFor="" className="block mb-2 text-md">

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+
+import { GlobalContext } from "../Layout/MainLayout";
 
 import {
   FaFacebookSquare,
@@ -10,6 +12,9 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const { newsLetterStateHandler, subscriptionNewsLetterHandler } =
+    useContext(GlobalContext);
+
   return (
     <div className="bg-[#0F192D] py-16">
       <div className="px-5 sm:px-0 sm:w-[90%] mx-auto flex flex-wrap gap-[20px]">
@@ -48,8 +53,12 @@ const Footer = () => {
                   type="text"
                   placeholder="Enter Email"
                   className="p-2 border-b border-gray-700 basis-full sm:basis-[calc(65%-5px)]  bg-transparent text-white outline-0 focus:border-white placeholder:text-sm"
+                  onChange={(e) => newsLetterStateHandler(e)}
                 />
-                <button className="bg-blue-400 basis-full sm:basis-[calc(35%-5px)] p-2 uppercase text-xs">
+                <button
+                  className="bg-blue-400 basis-full sm:basis-[calc(35%-5px)] p-2 uppercase text-xs"
+                  onClick={subscriptionNewsLetterHandler}
+                >
                   Subscribe To Newsletter
                 </button>
               </div>

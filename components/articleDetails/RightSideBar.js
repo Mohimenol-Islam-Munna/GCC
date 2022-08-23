@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsEnvelope, BsArrowRightCircle } from "react-icons/bs";
 
+import { GlobalContext } from "../Layout/MainLayout";
+
 const RightSideBar = () => {
+  const { newsLetterStateHandler, subscriptionNewsLetterHandler } =
+    useContext(GlobalContext);
+
   return (
     <div className="md:pl-8">
       <h2 className="mt-32 mb-8">About the author</h2>
@@ -41,10 +46,14 @@ const RightSideBar = () => {
             type="text"
             placeholder="Enter Email"
             className="w-full border-b border-gray-700 bg-transparent outline-0 focus:border-indigo-400 placeholder:text-xs"
+            onChange={(e) => newsLetterStateHandler(e)}
           />
-          <p className="mt-5 flex justify-center items-center px-2 gap-2 cursor-pointer">
+          <p
+            className="mt-5 flex justify-center items-center px-2 gap-2 cursor-pointer"
+            onClick={subscriptionNewsLetterHandler}
+          >
             <BsArrowRightCircle />
-            <span className="capitalize text-sm">view all articles</span>
+            <span className="capitalize text-sm">Subscribe Now</span>
           </p>
         </div>
       </div>

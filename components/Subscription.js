@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 
+import { GlobalContext } from "./Layout/MainLayout";
+
 const Subscription = () => {
+  const { newsLetterStateHandler, subscriptionNewsLetterHandler } =
+    useContext(GlobalContext);
+
   return (
     <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-20 flex flex-wrap sm:flex-nowrap">
       <div className="basis-full sm:basis-1/2 pr-2">
@@ -24,8 +29,9 @@ const Subscription = () => {
               type="text"
               placeholder="Enter Email"
               className="grow p-2 border-b border-gray-700 bg-transparent outline-0 focus:border-indigo-400 placeholder:text-sm"
+              onChange={(e) => newsLetterStateHandler(e)}
             />
-            <button className="p-2">
+            <button className="p-2" onClick={subscriptionNewsLetterHandler}>
               <BsArrowRightCircle />
             </button>
           </div>

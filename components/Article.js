@@ -4,10 +4,10 @@ import { BsArrowRightCircle } from "react-icons/bs";
 // components
 import Filter from "../components/Filter";
 
-function Article() {
+const Article = ({ searchKeyWordHandler }) => {
   return (
     <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-20">
-      <Filter />
+      <Filter searchKeyWordHandler={searchKeyWordHandler} />
       <div className="my-10 flex flex-wrap">
         {/* image  */}
         <div className="h-[300px] basis-full sm:basis-7/12 pr-5">
@@ -43,6 +43,6 @@ function Article() {
       </p>
     </div>
   );
-}
+};
 
 export default Article;
