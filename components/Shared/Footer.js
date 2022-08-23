@@ -122,20 +122,20 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 p-3 pl-0">
-            <ul className="flex text-xs">
-              <li className="border-r-2 grow border-gray-400 pr-2 uppercase">
+            <ul className="flex text-xs flex-col sm:flex-row space-y-2 sm:space-y-0">
+              <li className="sm:border-r-2 sm:grow border-gray-400 pr-2 uppercase">
                 <Link href="#">Terms of bussiness</Link>
               </li>
-              <li className="border-r-2 grow border-gray-400 px-2  uppercase">
+              <li className="sm:border-r-2 sm:grow border-gray-400 sm:px-2  uppercase">
                 <Link href="#">data usage &amp; privacy policy</Link>
               </li>
-              <li className="border-r-2 grow border-gray-400 px-2  uppercase">
+              <li className="sm:border-r-2 sm:grow border-gray-400 sm:px-2  uppercase">
                 <Link href="#">cancellation policy</Link>
               </li>
-              <li className="border-r-2 grow border-gray-400 px-2  uppercase">
+              <li className="sm:border-r-2 sm:grow border-gray-400 sm:px-2  uppercase">
                 <Link href="#">our ethics statement</Link>
               </li>
-              <li className="pl-2 grow uppercase">
+              <li className="sm:pl-2 sm:grow uppercase">
                 <Link href="#">sitemap</Link>
               </li>
             </ul>

@@ -8,9 +8,9 @@ function Article() {
   return (
     <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-20">
       <Filter />
-      <div className="my-10 flex ">
+      <div className="my-10 flex flex-wrap">
         {/* image  */}
-        <div className="h-[300px] basis-7/12 pr-5">
+        <div className="h-[300px] basis-full sm:basis-7/12 pr-5">
           <img
             src="/images/demoImage.jpg"
             alt="article_image"
@@ -19,7 +19,7 @@ function Article() {
         </div>
 
         {/* content  */}
-        <div className="basis-5/12">
+        <div className="basis-full mt-5 sm:mt-0 sm:basis-5/12">
           <h6 className="text-xs">Friday, sept 3 2022</h6>
           <h2 className="mt-5 text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
