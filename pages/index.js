@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
 
 // components
@@ -11,19 +10,84 @@ import Events from "../components/Events";
 import Subscription from "../components/Subscription";
 
 const Home = () => {
-  const { register, handleSubmit, reset } = useForm();
   const [searchKeywords, setSearchKeywords] = useState("");
+  const [filtersValue, setFilterValues] = useState({
+    featuredTopics: "",
+    type: "",
+    categories: "",
+    trendingTopics: "",
+    moreFilters: "",
+  });
 
+  console.log("all filter value ::", filtersValue);
+
+  // search keyword handler
   const searchKeyWordHandler = (e) => {
     console.log("searchKeyWordHandler :", e.target.value);
     setSearchKeywords(e.target.value);
+  };
+
+  // filters value handler
+  const filtersValueHandler = (e, filterType) => {
+    console.log("filter value ::", e.target.value);
+    console.log("filter filterType ::", filterType);
+
+    if (filterType === "featuredTopics") {
+      setFilterValues((prevData) => {
+        return {
+          ...prevData,
+          featuredTopics: e.target.value,
+        };
+      });
+    } else if (filterType === "type") {
+      setFilterValues((prevData) => {
+        return {
+          ...prevData,
+          type: e.target.value,
+        };
+      });
+    } else if (filterType === "categories") {
+      setFilterValues((prevData) => {
+        return {
+          ...prevData,
+          categories: e.target.value,
+        };
+      });
+    } else if (filterType === "trendingTopics") {
+      setFilterValues((prevData) => {
+        return {
+          ...prevData,
+          trendingTopics: e.target.value,
+        };
+      });
+    } else {
+      setFilterValues((prevData) => {
+        return {
+          ...prevData,
+          moreFilters: e.target.value,
+        };
+      });
+    }
+  };
+
+  const allFiltersClearHeandler = () => {
+    setFilterValues((prevData) => {
+      return {
+        ...prevData,
+        featuredTopics: "",
+        type: "",
+        categories: "",
+        trendingTopics: "",
+        moreFilters: "",
+      };
+    });
   };
 
   useEffect(() => {
     const fetchData = async () => {
       console.log("fetch data called ::", searchKeywords);
 
-      // for api call 
+      // for api call
       // const res = await axios.post(
       //   "endpoint",
       //   { data: e.target.value },
@@ -41,11 +105,35 @@ const Home = () => {
     }
   }, [searchKeywords]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      console.log("filtersValue ::", filtersValue);
+
+      // for api call
+      // const res = await axios.post(
+      //   "endpoint",
+      //   { data: filtersValue },
+      //   {
+      //     headers: {
+      //       "Content-type": "application/json",
+      //       Accept: "application/json",
+      //     },
+      //   }
+      // );
+    };
+
+    fetchData();
+  }, [filtersValue]);
+
   return (
     <div className="">
       <Title>GCC Limited</Title>
       <Hero />
-      <Article searchKeyWordHandler={searchKeyWordHandler} />
+      <Article
+        searchKeyWordHandler={searchKeyWordHandler}
+        allFiltersClearHeandler={allFiltersClearHeandler}
+        filtersValueHandler={filtersValueHandler}
+      />
       <BookAndDownload />
       <Events />
       <Subscription />
