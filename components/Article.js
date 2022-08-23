@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 // components
@@ -40,9 +41,11 @@ const Article = ({
             cumque vel asperiores magni a distinctio deleniti sunt temporibus
             qui quaerat. Pariatur!
           </p>
+          <Link href="article/1" passHref>
           <button className="mt-5 text-indigo-400 uppercase text-xs">
             read more
           </button>
+          </Link>
         </div>
       </div>
       <p className="flex justify-center items-center px-2 gap-2 cursor-pointer">
