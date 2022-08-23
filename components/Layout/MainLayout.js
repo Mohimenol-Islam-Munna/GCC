@@ -12,8 +12,6 @@ const MainLayout = ({ children }) => {
 
   // input email state handler
   const newsLetterStateHandler = (e) => {
-    console.log("your inputed email :", e.target.value);
-
     setNewsLetter(e.target.value);
   };
 
@@ -22,7 +20,6 @@ const MainLayout = ({ children }) => {
     // we can also check email is valid or not
 
     if (newsLetter) {
-      console.log("your inputed email ::", newsLetter);
       // for api call
       // const res = await axios.post(
       //   "endpoint",
@@ -35,7 +32,6 @@ const MainLayout = ({ children }) => {
       //   }
       // );
     } else {
-      console.log("your inputed value is empty::");
       // through client side error
     }
   };

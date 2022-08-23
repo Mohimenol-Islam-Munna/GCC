@@ -19,8 +19,6 @@ const Home = () => {
     moreFilters: "",
   });
 
-  console.log("all filter value ::", filtersValue);
-
   // search keyword handler
   const searchKeyWordHandler = (e) => {
     console.log("searchKeyWordHandler :", e.target.value);
@@ -85,8 +83,6 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("fetch data called ::", searchKeywords);
-
       // for api call
       // const res = await axios.post(
       //   "endpoint",
@@ -107,8 +103,6 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("filtersValue ::", filtersValue);
-
       // for api call
       // const res = await axios.post(
       //   "endpoint",
