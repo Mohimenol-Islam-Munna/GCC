@@ -112,7 +112,8 @@ function Events() {
       },
       location: "spain",
     },
-  ];
+  ]; 
+
 
   return (
     <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-10">
