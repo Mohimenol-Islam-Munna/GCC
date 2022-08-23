@@ -11,14 +11,12 @@ import Subscription from "../components/Subscription";
 const Home = () => {
   return (
     <div className="">
-      <div className="sm:w-[90%] mx-auto">
-        <Title>GCC Limited</Title>
-        <Hero />
-        <Article />
-        <BookAndDownload />
-        <Events />
-        <Subscription />
-      </div>
+      <Title>GCC Limited</Title>
+      <Hero />
+      <Article />
+      <BookAndDownload />
+      <Events />
+      <Subscription />
     </div>
   );
 };
