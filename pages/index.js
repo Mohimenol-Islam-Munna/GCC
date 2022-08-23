@@ -68,7 +68,8 @@ const Home = () => {
     }
   };
 
-  const allFiltersClearHeandler = () => {
+  // all filters clear handler 
+  const allFiltersClearHandler = () => {
     setFilterValues((prevData) => {
       return {
         ...prevData,
@@ -124,8 +125,9 @@ const Home = () => {
       <Title>GCC Limited</Title>
       <Hero />
       <Article
+        filtersValue={filtersValue}
         searchKeyWordHandler={searchKeyWordHandler}
-        allFiltersClearHeandler={allFiltersClearHeandler}
+        allFiltersClearHandler={allFiltersClearHandler}
         filtersValueHandler={filtersValueHandler}
       />
       <BookAndDownload />

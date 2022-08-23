@@ -6,15 +6,17 @@ import { BsArrowRightCircle } from "react-icons/bs";
 import Filter from "../components/Filter";
 
 const Article = ({
+  filtersValue,
   searchKeyWordHandler,
   filtersValueHandler,
-  allFiltersClearHeandler,
+  allFiltersClearHandler,
 }) => {
   return (
     <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-20">
       <Filter
+        filtersValue={filtersValue}
         searchKeyWordHandler={searchKeyWordHandler}
-        allFiltersClearHeandler={allFiltersClearHeandler}
+        allFiltersClearHandler={allFiltersClearHandler}
         filtersValueHandler={filtersValueHandler}
       />
       <div className="my-10 flex flex-wrap">
@@ -42,9 +44,9 @@ const Article = ({
             qui quaerat. Pariatur!
           </p>
           <Link href="article/1" passHref>
-          <button className="mt-5 text-indigo-400 uppercase text-xs">
-            read more
-          </button>
+            <button className="mt-5 text-indigo-400 uppercase text-xs">
+              read more
+            </button>
           </Link>
         </div>
       </div>

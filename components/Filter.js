@@ -1,9 +1,10 @@
 import React from "react";
 
 const Filter = ({
+  filtersValue,
   searchKeyWordHandler,
   filtersValueHandler,
-  allFiltersClearHeandler,
+  allFiltersClearHandler,
 }) => {
   return (
     <div className="py-10">
@@ -25,6 +26,7 @@ const Filter = ({
             name="featured_topics"
             id="featured_topics"
             className="border border-gray-500 p-2 rounded bg-white grow capitalize text-sm"
+            value={filtersValue.featuredTopics}
             onChange={(e) => filtersValueHandler(e, "featuredTopics")}
           >
             <option value="">featured topics</option>
@@ -37,6 +39,7 @@ const Filter = ({
             name="type"
             id="type"
             className="border border-gray-500 p-2 rounded bg-white grow capitalize text-sm"
+            value={filtersValue.type}
             onChange={(e) => filtersValueHandler(e, "type")}
           >
             <option value="">type</option>
@@ -49,6 +52,7 @@ const Filter = ({
             name="categories"
             id="categories"
             className="border border-gray-500 p-2 rounded bg-white grow capitalize text-sm"
+            value={filtersValue.categories}
             onChange={(e) => filtersValueHandler(e, "categories")}
           >
             <option value="">categories</option>
@@ -61,6 +65,7 @@ const Filter = ({
             name="trending_topics"
             id="trending_topics"
             className="border border-gray-500 p-2 rounded bg-white grow capitalize text-sm"
+            value={filtersValue.trendingTopics}
             onChange={(e) => filtersValueHandler(e, "trendingTopics")}
           >
             <option value="">trending topics</option>
@@ -73,6 +78,7 @@ const Filter = ({
             name="more_filters"
             id="more_filters"
             className="border border-gray-500 p-2 rounded bg-white grow capitalize text-sm"
+            value={filtersValue.moreFilters}
             onChange={(e) => filtersValueHandler(e, "moreFilters")}
           >
             <option value="">more filters</option>
@@ -85,7 +91,7 @@ const Filter = ({
       <div className="my-5 text-end">
         <button
           className="bg-indigo-400 px-4 py-2 text-white uppercase text-sm"
-          onClick={allFiltersClearHeandler}
+          onClick={allFiltersClearHandler}
         >
           Clear all filters
         </button>
