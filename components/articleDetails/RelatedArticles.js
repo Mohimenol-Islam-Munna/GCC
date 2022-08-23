@@ -56,7 +56,7 @@ const RelatedArticles = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
       image: "/images/demoImage.jpg",
-      type: "Freelancer",
+      type: "Lorem ipsum dolor sit amet consectetur",
     },
     {
       id: 2,
@@ -64,7 +64,7 @@ const RelatedArticles = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
       image: "/images/demoImage.jpg",
-      type: "Freelancer",
+      type: "Lorem ipsum dolor sit amet consectetur",
     },
     {
       id: 3,
@@ -72,7 +72,7 @@ const RelatedArticles = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
       image: "/images/demoImage.jpg",
-      type: "Freelancer",
+      type: "Lorem ipsum dolor sit amet consectetur",
     },
     {
       id: 4,
@@ -80,7 +80,7 @@ const RelatedArticles = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
       image: "/images/demoImage.jpg",
-      type: "Freelancer",
+      type: "Lorem ipsum dolor sit amet consectetur",
     },
     {
       id: 5,
@@ -88,7 +88,7 @@ const RelatedArticles = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse perferendis porr magni! Nulla voluptatum distinctio hic laboriosam obcaecati!",
       image: "/images/demoImage.jpg",
-      type: "Freelancer",
+      type: "Lorem ipsum dolor sit amet consectetur",
     },
   ];
 
@@ -113,10 +113,10 @@ const RelatedArticles = () => {
 
               <div className="mt-5">
                 <p className="text-lg capitalize">{data.title}</p>
-                <p className="mt-2 text-xs uppercase text-indigo-400">
+                <p className="mt-3 text-sm">{data.description}</p>
+                <p className="mt-4 text-xs">
                   {data.type}
                 </p>
-                <p className="mt-3 text-sm">{data.description}</p>
               </div>
             </div>
           ))}

@@ -12,8 +12,8 @@ import {
 const Footer = () => {
   return (
     <div className="bg-[#0F192D] py-16">
-      <div className="sm:w-[90%] mx-auto flex flex-wrap">
-        <div className="px-3 basis-full lg:basis-1/2">
+      <div className="px-5 sm:px-0 sm:w-[90%] mx-auto flex flex-wrap gap-[20px]">
+        <div className="basis-full lg:basis-[calc(50%-10px)]">
           <h2 className="text-white text-6xl">E</h2>
           <p className="text-white text-xs sm:text-sm">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -74,9 +74,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="basis-full lg:basis-1/2 mt-5 lg:mt-0 text-white">
+        <div className="basis-full lg:basis-[calc(50%-10px)] mt-5 lg:mt-0 text-white">
           <div className="flex flex-wrap gap-[10px] sm:gap-[6.67px]">
-            <div className="basis-[calc(50%-5px)] p-3 sm:basis-[calc(25%-5px)]">
+            <div className="basis-[calc(50%-5px)] p-3 pl-0 sm:basis-[calc(25%-5px)]">
               <h4 className="uppercase text-xs sm:text-sm">company</h4>
               <ul className="mt-5 capitalize text-xs sm:text-sm">
                 <li>about us</li>
@@ -87,7 +87,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="basis-[calc(50%-5px)] p-3 sm:basis-[calc(25%-5px)]">
+            <div className="basis-[calc(50%-5px)] p-3 pl-0 sm:basis-[calc(25%-5px)]">
               <h4 className="uppercase text-xs sm:text-sm">service</h4>
               <ul className=" mt-5 capitalize  text-xs sm:text-sm">
                 <li>works</li>
@@ -98,7 +98,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="basis-[calc(50%-5px)] p-3 sm:basis-[calc(25%-5px)]">
+            <div className="basis-[calc(50%-5px)] p-3 pl-0 sm:basis-[calc(25%-5px)]">
               <h4 className="uppercase text-xs sm:text-sm">learn</h4>
               <ul className="mt-5 capitalize  text-xs sm:text-sm">
                 <li>UX Design</li>
@@ -109,7 +109,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="basis-[calc(50%-5px)] p-3 sm:basis-[calc(25%-5px)]">
+            <div className="basis-[calc(50%-5px)] p-3 pl-0 sm:basis-[calc(25%-5px)]">
               <h4 className="uppercase text-xs sm:text-sm">collaborate</h4>
               <ul className="mt-5 capitalize  text-xs sm:text-sm">
                 <li>partner with us</li>
@@ -121,7 +121,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-10 p-3">
+          <div className="mt-10 p-3 pl-0">
             <ul className="flex text-xs">
               <li className="border-r-2 grow border-gray-400 pr-2 uppercase">
                 <Link href="#">Terms of bussiness</Link>

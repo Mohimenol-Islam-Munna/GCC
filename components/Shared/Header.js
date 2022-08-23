@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gray-100 border-b border-green-600">
+    <div className="bg-gray-100">
       <div
         className={`sm:w-[90%] mx-auto relative ${
           !toggleMenu ? "pt-7 pb-7" : "pt-5"
@@ -40,7 +40,7 @@ const Header = () => {
           className={`${toggleMenu ? "flex" : "hidden"} sm:flex
            flex-col sm:flex-row mt-9 sm:mt-0 transition-all duration-1000 text-center sm:items-center text-sm md:text-md`}
         >
-          <li className="sm:mr-2.5 py-2 uppercase border-b sm:border-b-0  hover:bg-gray-200 font-medium">
+          <li className="sm:mr-2.5 py-2 uppercase border-b sm:border-b-0  hover:bg-gray-200 sm:hover:bg-transparent hover:text-blue-500 font-medium">
             <Link href="/" passHref>
               <a
                 className={`${
@@ -53,7 +53,7 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
+          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 sm:hover:bg-transparent  hover:text-blue-500 font-medium">
             <Link href="/service" passHref>
               <a
                 className={`${
@@ -66,7 +66,7 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
+          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 sm:hover:bg-transparent  hover:text-blue-500 font-medium">
             <Link href="/pricing" passHref>
               <a
                 className={`${
@@ -79,7 +79,7 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
+          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 sm:hover:bg-transparent  hover:text-blue-500 font-medium">
             <Link href="/resources" passHref>
               <a
                 className={`${
@@ -92,7 +92,7 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 font-medium">
+          <li className="sm:mr-2.5 py-2 uppercase  border-b sm:border-b-0 hover:bg-gray-200 sm:hover:bg-transparent  hover:text-blue-500 font-medium">
             <Link href="/enterprise" passHref>
               <a
                 className={`${
@@ -107,7 +107,7 @@ const Header = () => {
           </li>
 
           {/* right side  */}
-          <li className="sm:ml-auto sm:mr-2.5 flex justify-center items-center py-2 border-b sm:border-b-0 hover:bg-gray-200 font-medium">
+          <li className="sm:ml-auto sm:mr-2.5 flex justify-center items-center py-2 border-b sm:border-b-0 hover:bg-gray-200 sm:hover:bg-transparent  hover:text-blue-500 font-medium">
             <Link href="/lanuage" passHref>
               <a
                 className={`${
@@ -120,7 +120,7 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className="sm:mr-2.5 py-2 uppercase border-b sm:border-b-0 hover:bg-gray-200 font-medium">
+          <li className="sm:mr-2.5 py-2 uppercase border-b sm:border-b-0 hover:bg-gray-200 sm:hover:bg-transparent  hover:text-blue-500 font-medium">
             <Link href="/login" passHref>
               <a
                 className={`${
@@ -133,7 +133,7 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className="py-2 uppercase hover:bg-gray-200 font-medium">
+          <li className="py-2 uppercase hover:bg-gray-200 sm:hover:bg-transparent hover:text-blue-500 font-medium">
             <Link href="/contact-sales" passHref>
               <a
                 className={`${

@@ -94,7 +94,7 @@ const BookAndDownloads = () => {
   ];
 
   return (
-    <div className="w-[90%] mx-auto pt-10 pb-24">
+    <div className="px-5 sm:px-0 sm:w-[90%] mx-auto pt-10 pb-24">
       <SharedSlider customSliderProps={customSliderProps}>
         {bookAndDownloadsSliderData.map((data) => (
           <div key={data.id} className="relative">

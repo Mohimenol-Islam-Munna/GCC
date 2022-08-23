@@ -3,14 +3,14 @@ import { BsBookmark } from "react-icons/bs";
 
 function MainContent() {
   return (
-    <div>
+    <div className="md:pr-8">
       <button className="bg-indigo-400 px-4 py-1 text-white">acticle</button>
       <div className="mt-5">
         <h2 className="text-2xl">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ab
           officiis sed quos repellendus. Sequi.
         </h2>
-        <div className="flex gap-4 my-5">
+        <div className="flex flex-wrap gap-4 my-5">
           <p className="text-xs">
             Md Mohimenol Islam Munna on September 3, 2022
           </p>

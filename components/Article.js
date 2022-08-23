@@ -6,7 +6,7 @@ import Filter from "../components/Filter";
 
 function Article() {
   return (
-    <div className="w-[90%] mx-auto py-20">
+    <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-20">
       <Filter />
       <div className="my-10 flex ">
         {/* image  */}

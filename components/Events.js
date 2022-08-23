@@ -115,7 +115,7 @@ function Events() {
   ];
 
   return (
-    <div className="w-[90%] mx-auto py-10">
+    <div className="px-5 sm:px-0 sm:w-[90%] mx-auto py-10">
       <SharedSlider customSliderProps={customSliderProps}>
         {eventSliderData.map((eventData) => (
           <div key={eventData.id} className="relative">

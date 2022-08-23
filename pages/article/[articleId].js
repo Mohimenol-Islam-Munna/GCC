@@ -24,20 +24,20 @@ import SocialShare from "../../components/articleDetails/SocialShare";
 const Article = () => {
   return (
     <div className="relative">
-      <div className="w-[90%] mx-auto">
+      <div className="px-5 sm:px-0 sm:w-[90%] mx-auto">
         {/* content  */}
         <div>
           <p className="flex items-center gap-2 cursor-pointer my-10">
             <BsArrowLeftCircle />
             <span className="capitalize text-sm">back to home page</span>
           </p>
-          <div className="flex gap-[10px]">
+          <div className="flex flex-wrap md:flex-nowrap gap-[10px]">
             {/* main content  */}
-            <div className="basis-[calc(70%-5px)]">
+            <div className="basis-full md:basis-[calc(70%-5px)]">
               <MainContent />
             </div>
             {/* right sidebar  */}
-            <div className="basis-[calc(30%-5px)]">
+            <div className="basis-full md:basis-[calc(30%-5px)] md:border-l border-gray-500">
               <RightSideBar />
             </div>
           </div>
